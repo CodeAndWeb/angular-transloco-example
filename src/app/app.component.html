@@ -1,24 +1,16 @@
-<ng-container *transloco="let t">
-  <h1>{{ t('main.title') }}</h1>
-</ng-container>
-
-<!-- language switch -->
-<div style="display:flex; gap:1rem">
-  <span>Select your language:</span>
-  <button (click)="switchLanguage('en')">English</button>
-  <button (click)="switchLanguage('es')">Español</button>
-</div>
-
 <!-- structural directive -->
 <ng-container *transloco="let t">
-  <h2>{{ t('directive.title') }}</h2>
-  <p>{{ t('directive.greeting', { name: 'Jack' }) }}</p>
+  <h1>{{ t('main.title') }}</h1>
+  <p>{{ t('main.greeting', { name: 'John' }) }}</p>
 </ng-container>
 
-<!-- structural directive with scope -->
-<ng-container *transloco="let t; read:'scoped'">
-  <h2>{{ t('title') }}</h2>
-  <p>{{ t('text') }}</p>
+<!-- language selector -->
+<ng-container *transloco="let t">
+<div style="display:flex; gap:1rem">
+    <span>{{t('locale-switch.label')}}</span>
+    <button (click)="switchLanguage('en')">{{t('locale-switch.languages.en')}}</button>
+    <button (click)="switchLanguage('es')">{{t('locale-switch.languages.es')}}</button>
+</div>
 </ng-container>
 
 <!-- using translate pipe -->
@@ -29,19 +21,15 @@
 <h2 transloco="attribute-directive.title"></h2>
 <p transloco="attribute-directive.greeting" [translocoParams]="{ name: 'Ben' }"></p>
 
-<!-- translations inside source code -->
-<h2>Translated in the source code</h2>
-This is the text: {{translatedInSource}}
-
-<!-- translations with ICU syntax: pluralization and selection -->
+<!-- translations with ICU syntax: pluralization -->
 <ng-container *transloco="let t">
   <h2>{{ t('icu.title') }}</h2>
-
-  <p>{{ t('icu.select', {flavor: 'vanilla'}) }}</p>
-  <p>{{ t('icu.select', {flavor: 'strawberry'}) }}</p>
-  <p>{{ t('icu.select', {flavor: 'chocolate'}) }}</p>
 
   <p>{{ t('icu.pluralization', {count: 0}) }}</p>
   <p>{{ t('icu.pluralization', {count: 1}) }}</p>
   <p>{{ t('icu.pluralization', {count: 10}) }}</p>
+
+  <p>{{ t('icu.select', {flavor: 'vanilla'}) }}</p>
+  <p>{{ t('icu.select', {flavor: 'strawberry'}) }}</p>
+  <p>{{ t('icu.select', {flavor: 'chocolate'}) }}</p>
 </ng-container>

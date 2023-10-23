@@ -1,26 +1,15 @@
 {
-	"attribute-directive": {
-		"greeting": "Hey {{name}}, this is another way to use translations.",
-		"title": "Attribute Directive"
-	},
-	"directive": {
-		"greeting": "Using structural directives is efficient.",
-		"title": "Structural Directive"
-	},
-	"icu": {
-		"pluralization": "You have {count, plural, =0 {no apples} one {one apple} other {# apples}}",
-		"select": "I like {flavor, select, vanilla {vanilla}  strawberry {strawberry} other {all}} ice cream.",
-		"title": "Formatting messages using ICU Syntax"
-	},
-	"main": {
-		"title": "Transloco i18n Example"
-	},
-	"pipe": {
-		"greeting": "Hello {{name}}, how are you?",
-		"title": "Translations using the a pipe"
-	},
-	"scoped": {
-		"text": "With scopes, you can use shorter IDs in the templates.",
-		"title": "Scopes"
-	}
+	"attribute-directive.greeting": "Hello {{name}}, this is an attribute directive!",
+	"attribute-directive.title": "Attribute directives",
+	"icu.pluralization": "You have {count, plural, =0 {no apples} one {one apple} other {# apples}}!",
+	"icu.select": "I like {flavor, select, vanilla {vanilla} strawberry {strawberry} other {all flavors of}} ice cream.",
+	"icu.title": "ICU Message Formatting",
+	"in-code.text": "This text is translated in code. The function is called each time, the language changes. Value={{count}}",
+	"locale-switch.label": "Select your language",
+	"locale-switch.languages.en": "Inglés",
+	"locale-switch.languages.es": "Español",
+	"main.greeting": "Hello {{name}}, see how easy it is to translate your Angular App!",
+	"main.title": "Angular + Transloco Example",
+	"pipe.greeting": "Hello {{name}}, we are using pipes now!",
+	"pipe.title": "Translation Pipes"
 }
