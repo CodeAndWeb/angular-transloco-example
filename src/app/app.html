@@ -1,16 +1,35 @@
 <ng-container *transloco="let t">
+
+    <!-- function -->
     <h1>{{ t('main.title') }}</h1>
     <p>{{ t('main.greeting', { name: 'John' }) }}</p>
 
+    <!-- pipes -->
     <h2>{{'pipe.title' | transloco}}</h2>
     <p>{{'pipe.greeting' | transloco: {name: 'Jill'} }}</p>
 
+    <!-- attribute directives -->
     <h2 transloco="attribute-directive.title"></h2>
     <p transloco="attribute-directive.greeting" [translocoParams]="{ name: 'Ben' }"></p>
 
+    <!-- language selector -->
     <div style="display:flex; gap:1rem">
         <span>{{ t('locale-switch.label') }}:</span>
         <button (click)="switchLanguage('en')">English</button>
         <button (click)="switchLanguage('es')">Español</button>
     </div>
+
+    <!-- Message format -->
+    <h2>{{ t('message.title') }}</h2>
+
+    <!-- translations with ICU syntax: pluralization -->
+    <p>{{ t('message.pluralization', {count: 0}) }}</p>
+    <p>{{ t('message.pluralization', {count: 1}) }}</p>
+    <p>{{ t('message.pluralization', {count: 10}) }}</p>
+
+    <!-- translations with ICU syntax: selection -->
+    <p>{{ t('message.select', {flavor: 'vanilla'}) }}</p>
+    <p>{{ t('message.select', {flavor: 'strawberry'}) }}</p>
+    <p>{{ t('message.select', {flavor: 'chocolate'}) }}</p>
+
 </ng-container>

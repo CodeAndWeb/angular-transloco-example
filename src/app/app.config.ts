@@ -1,24 +1,34 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, isDevMode } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+    ApplicationConfig,
+    provideBrowserGlobalErrorListeners,
+    provideZoneChangeDetection,
+    isDevMode
+} from "@angular/core";
+import {provideRouter} from "@angular/router";
 
-import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http';
-import { TranslocoHttpLoader } from './transloco-loader';
-import { provideTransloco } from '@jsverse/transloco';
+import {routes} from "./app.routes";
+import {provideHttpClient} from "@angular/common/http";
+import {TranslocoHttpLoader} from "./transloco-loader";
+import {provideTransloco} from "@jsverse/transloco";
+import {provideTranslocoMessageformat} from "@jsverse/transloco-messageformat";
+
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes), provideHttpClient(), provideTransloco({
-        config: { 
-          availableLangs: ['en', 'es'],
-          defaultLang: 'en',
-          // Remove this option if your application doesn't support changing language in runtime.
-          reRenderOnLangChange: true,
-          prodMode: !isDevMode(),
-        },
-        loader: TranslocoHttpLoader
-      })
-  ]
+    providers: [
+        provideBrowserGlobalErrorListeners(),
+        provideZoneChangeDetection({eventCoalescing: true}),
+        provideRouter(routes),
+        provideHttpClient(),
+        provideTransloco({
+            config: {
+                availableLangs: ["en", "es"],
+                defaultLang: "en",
+                // Remove this option if your application doesn't support changing language in runtime.
+                reRenderOnLangChange: true,
+                prodMode: !isDevMode()
+            },
+            loader: TranslocoHttpLoader
+        }),
+        provideTranslocoMessageformat()
+    ]
 };

@@ -5,6 +5,9 @@
   "locale-switch.label": "Choose your language",
   "main.greeting": "Hello {{name}}, see how easy it is to translate your Angular App!",
   "main.title": "Angular + Transloco Example",
+  "message.pluralization": "You have {count, plural, =0 {no apples} one {one apple} other {# apples}}!",
+  "message.select": "I like {flavor, select, vanilla {vanilla} strawberry {strawberry} other {all flavors of}} ice cream.",
+  "message.title": "ICU Message Formatting",
   "pipe.greeting": "Hello {{name}}, we are using pipes now!",
   "pipe.title": "Translation Pipes"
 }
