@@ -1,0 +1,16 @@
+<ng-container *transloco="let t">
+    <h1>{{ t('main.title') }}</h1>
+    <p>{{ t('main.greeting', { name: 'John' }) }}</p>
+
+    <h2>{{'pipe.title' | transloco}}</h2>
+    <p>{{'pipe.greeting' | transloco: {name: 'Jill'} }}</p>
+
+    <h2 transloco="attribute-directive.title"></h2>
+    <p transloco="attribute-directive.greeting" [translocoParams]="{ name: 'Ben' }"></p>
+
+    <div style="display:flex; gap:1rem">
+        <span>{{ t('locale-switch.label') }}:</span>
+        <button (click)="switchLanguage('en')">English</button>
+        <button (click)="switchLanguage('es')">Español</button>
+    </div>
+</ng-container>

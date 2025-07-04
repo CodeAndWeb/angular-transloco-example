@@ -1,15 +1,10 @@
 {
-	"attribute-directive.greeting": "Hola {{name}}, ¡esto es una directiva de atributos!",
-	"attribute-directive.title": "Directivas de atributos",
-	"icu.pluralization": "¡Tienes {count, plural, =0 {no manzanas} one {una manzana} other {# manzanas}}!",
-	"icu.select": "Me gusta el helado de {flavor, select, vanilla {vainilla} strawberry {fresa} other {todos los sabores}}.",
-	"icu.title": "Formato de mensajes ICU",
-	"in-code.text": "Este texto se traduce en código. La función se llama cada vez que el idioma cambia. Valor={{count}}",
-	"locale-switch.label": "Seleccione su idioma",
-	"locale-switch.languages.en": "English",
-	"locale-switch.languages.es": "Spanish",
-	"main.greeting": "Hola {{name}}, ¡ve lo fácil que es traducir tu aplicación Angular!",
-	"main.title": "Ejemplo de Angular + Transloco",
-	"pipe.greeting": "Hola {{name}}, ¡ya estamos usando pipes!",
-	"pipe.title": "Pipes de traducción"
+  "attribute-directive.greeting": "Hola {{name}}, ¡esto es una directiva de atributos!",
+  "attribute-directive.title": "Directivas de atributos",
+  "in-code.text": "Traducción en código: Esto es mambo #{{count}}",
+  "locale-switch.label": "Elija su idioma",
+  "main.greeting": "Hola {{name}}, ¡ve lo fácil que es traducir tu aplicación Angular!",
+  "main.title": "Ejemplo de Angular + Transloco",
+  "pipe.greeting": "Hola {{name}}, ¡ya estamos usando tuberías!",
+  "pipe.title": "Tubos de traducción"
 }
